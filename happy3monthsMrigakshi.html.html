@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Three Months — Mrigakshi ♡</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #050509;
+    color: #fff;
+    overflow-x: hidden;
+  }
+
+  .stars, .stars:before, .stars:after {
+    position: fixed;
+    inset: 0;
+    content: "";
+    pointer-events: none;
+  }
+  .stars {
+    background-image:
+      radial-gradient(circle, rgba(255,255,255,.75) 1px, transparent 1px),
+      radial-gradient(circle, rgba(255,180,210,.45) 1px, transparent 1px);
+    background-size: 90px 90px, 140px 140px;
+    background-position: 10px 20px, 50px 80px;
+    opacity: .32;
+    animation: drift 25s linear infinite;
+    z-index: 0;
+  }
+  @keyframes drift { to { transform: translateY(-90px); } }
+
+  section {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 22px;
+    overflow: hidden;
+  }
+
+  .hero {
+    text-align: center;
+    background:
+      radial-gradient(circle at 50% 40%, rgba(168,72,116,.24), transparent 38%),
+      radial-gradient(circle at 20% 80%, rgba(90,70,150,.15), transparent 35%);
+  }
+
+  .eyebrow {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 12px Arial, sans-serif;
+    opacity: .6;
+    margin-bottom: 25px;
+  }
+
+  h1 {
+    font-size: clamp(55px, 12vw, 130px);
+    font-weight: 400;
+    line-height: .9;
+    letter-spacing: -5px;
+  }
+
+  .name {
+    color: #f3b7cb;
+    text-shadow: 0 0 35px rgba(243,183,203,.35);
+  }
+
+  .sub {
+    margin-top: 30px;
+    font-size: clamp(17px, 3vw, 24px);
+    color: rgba(255,255,255,.75);
+    font-style: italic;
+  }
+
+  .scroll {
+    position: absolute;
+    bottom: 30px;
+    font: 10px Arial, sans-serif;
+    letter-spacing: 3px;
+    opacity: .5;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 50% { opacity: .15; transform: translateY(6px); } }
+
+  .film {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .chapter {
+    font: 11px Arial, sans-serif;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #e8a9bf;
+    margin-bottom: 18px;
+  }
+
+  h2 {
+    font-size: clamp(35px, 7vw, 72px);
+    font-weight: 400;
+    margin-bottom: 28px;
+  }
+
+  .text {
+    max-width: 690px;
+    margin: auto;
+    font-size: clamp(18px, 3vw, 23px);
+    line-height: 1.8;
+    color: rgba(255,255,255,.78);
+  }
+
+  .card {
+    margin: 45px auto 0;
+    max-width: 650px;
+    padding: 35px;
+    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(255,255,255,.035);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 20px 80px rgba(0,0,0,.35);
+    border-radius: 4px;
+  }
+
+  .quote {
+    font-size: clamp(24px, 4vw, 36px);
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .timeline {
+    display: grid;
+    gap: 22px;
+    max-width: 720px;
+    margin: 40px auto 0;
+  }
+
+  .moment {
+    text-align: left;
+    padding: 24px;
+    border-left: 2px solid #d98ca9;
+    background: linear-gradient(90deg, rgba(217,140,169,.08), transparent);
+  }
+  .moment strong {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #f2b5ca;
+  }
+  .moment span {
+    color: rgba(255,255,255,.65);
+    line-height: 1.6;
+  }
+
+  .final {
+    text-align: center;
+    background: radial-gradient(circle at center, rgba(170,70,110,.22), transparent 45%);
+  }
+
+  .heart {
+    font-size: 55px;
+    display: block;
+    margin-bottom: 20px;
+    animation: heartbeat 1.8s infinite;
+  }
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.12); }
+    30% { transform: scale(1); }
+  }
+
+  .signature {
+    margin-top: 38px;
+    font-size: 25px;
+    color: #f1b2c8;
+  }
+
+  .small {
+    margin-top: 15px;
+    font: 11px Arial, sans-serif;
+    letter-spacing: 2px;
+    opacity: .4;
+  }
+
+  .fade {
+    animation: fadeUp 1.4s ease both;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .petal {
+    position: fixed;
+    top: -20px;
+    font-size: 13px;
+    opacity: .35;
+    pointer-events: none;
+    animation: fall linear infinite;
+    z-index: 2;
+  }
+  @keyframes fall {
+    to { transform: translateY(110vh) rotate(360deg); }
+  }
+</style>
+</head>
+
+<body>
+<div class="stars"></div>
+
+<div class="petal" style="left:8%;animation-duration:11s;animation-delay:1s;">♡</div>
+<div class="petal" style="left:24%;animation-duration:14s;animation-delay:4s;">✦</div>
+<div class="petal" style="left:47%;animation-duration:12s;animation-delay:2s;">♡</div>
+<div class="petal" style="left:68%;animation-duration:15s;animation-delay:5s;">✦</div>
+<div class="petal" style="left:87%;animation-duration:10s;animation-delay:3s;">♡</div>
+
+<section class="hero">
+  <div class="fade">
+    <div class="eyebrow">A little film about us</div>
+    <h1>Three<br><span class="name">Months</span></h1>
+    <p class="sub">for the girl who made ordinary days feel a little more special.</p>
+  </div>
+  <div class="scroll">SCROLL TO CONTINUE ↓</div>
+</section>
+
+<section>
+  <div class="film">
+    <div class="chapter">Chapter 01 · You</div>
+    <h2>Mrigakshi.</h2>
+    <p class="text">
+      There are some names that are just names.
+      And then there are names that slowly become attached to
+      favourite memories, random smiles, late conversations,
+      and moments you never want to forget.
+    </p>
+    <div class="card">
+      <div class="quote">
+        “Somehow, in just three months, you became one of my favourite parts of my story.”
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="film">
+    <div class="chapter">Chapter 02 · The little things</div>
+    <h2>It's not just the big moments.</h2>
+    <div class="timeline">
+      <div class="moment">
+        <strong>The conversations</strong>
+        <span>The random talks, the silly messages, the moments when neither of us really had a plan for what to say.</span>
+      </div>
+      <div class="moment">
+        <strong>The smiles</strong>
+        <span>Those tiny moments that somehow stay in my head longer than they probably should.</span>
+      </div>
+      <div class="moment">
+        <strong>The memories</strong>
+        <span>Three months may sound small, but we've already collected moments that mean a lot to me.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="film">
+    <div class="chapter">Chapter 03 · A promise</div>
+    <h2>I don't need a perfect story.</h2>
+    <p class="text">
+      I just want something real.
+      Something where we can talk, laugh, understand each other,
+      learn from our mistakes, and keep making memories together.
+    </p>
+    <div class="card">
+      <div class="quote">
+        “I can't promise every day will be perfect. I can promise that what we have matters to me.”
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="film">
+    <span class="heart">♡</span>
+    <div class="chapter">Three months · And counting</div>
+    <h2>Happy 3 Months,<br><span class="name">Mrigakshi.</span></h2>
+    <p class="text">
+      Thank you for being part of these three months.
+      Thank you for the memories, the laughs, the conversations,
+      and all the little things that made this chapter ours.
+      <br><br>
+      Here's to whatever comes next — one moment, one memory,
+      and one day at a time.
+    </p>
+    <div class="signature">— Debraj ♡</div>
+    <div class="small">MADE WITH A LOT OF THOUGHT FOR MRIGAKSHI</div>
+  </div>
+</section>
+
+<script>
+  // Gentle reveal effect as sections enter the screen
+  const items = document.querySelectorAll('.film');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('fade');
+    });
+  }, { threshold: 0.18 });
+
+  items.forEach(item => observer.observe(item));
+</script>
+</body>
+</html>
